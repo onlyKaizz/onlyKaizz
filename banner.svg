@@ -1,63 +1,222 @@
-<svg width="900" height="300" viewBox="0 0 900 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="400" viewBox="0 0 1200 400"
+     fill="none">
+
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="300" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#2a070b"/>
-      <stop offset="0.55" stop-color="#6e0f19"/>
-      <stop offset="1" stop-color="#a3141f"/>
+    <linearGradient id="bg"
+                    x2="1200" y2="400"
+                    gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14090e"/>
+      <stop offset=".52" stop-color="#500b17"/>
+      <stop offset="1" stop-color="#b21b2e"/>
     </linearGradient>
-    <linearGradient id="bar" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#F5B82E"/>
-      <stop offset="0.5" stop-color="#FFD65A"/>
-      <stop offset="1" stop-color="#F5B82E"/>
+
+    <linearGradient id="gold">
+      <stop stop-color="#ffe7a3"/>
+      <stop offset=".5" stop-color="#f6bf50"/>
+      <stop offset="1" stop-color="#b3762e"/>
     </linearGradient>
+
+    <radialGradient id="halo">
+      <stop stop-color="#58e5ff" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#58e5ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="core">
+      <stop stop-color="#ffffff"/>
+      <stop offset=".4" stop-color="#cbfbff"/>
+      <stop offset="1" stop-color="#4cdaef"/>
+    </radialGradient>
+
+    <pattern id="grid"
+             width="36" height="36"
+             patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36"
+            stroke="#ffc67e" stroke-opacity=".045"/>
+    </pattern>
+
+    <clipPath id="clip">
+      <rect width="1200" height="400" rx="22"/>
+    </clipPath>
   </defs>
 
-  <!-- Card -->
-  <rect x="1" y="1" width="898" height="298" rx="20" fill="url(#bg)" stroke="#E0303C" stroke-width="2"/>
-  <rect x="1" y="1" width="898" height="5" rx="2.5" fill="url(#bar)"/>
+  <g clip-path="url(#clip)">
+    <!-- Nền -->
+    <rect width="1200" height="400" fill="url(#bg)"/>
+    <rect width="1200" height="400" fill="url(#grid)"/>
 
-  <!-- Badge -->
-  <rect x="40" y="50" width="196" height="28" rx="14" fill="#2a070b" stroke="#F5B82E" stroke-opacity="0.6"/>
-  <circle cx="58" cy="64" r="4" fill="#5CE1FF"/>
-  <text x="72" y="69" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#FFD65A">SOFTWARE DEVELOPER</text>
+    <path d="M800 -60L530 460
+             M1000 -60L730 460
+             M1200 -60L930 460"
+          stroke="#ff6e66"
+          stroke-opacity=".045"
+          stroke-width="90"/>
 
-  <!-- Name -->
-  <text x="40" y="136" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="800" fill="#ffffff">Van Khai</text>
+    <!-- Khung vàng -->
+    <path d="M28 65V28H100
+             M1100 28H1172V65
+             M28 335V372H100
+             M1100 372H1172V335"
+          stroke="url(#gold)" stroke-width="2"/>
 
-  <!-- Quote -->
-  <text x="40" y="170" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-style="italic" fill="#f3c9bf">"Build things that matter."</text>
+    <path d="M118 28H1065M118 372H1065"
+          stroke="#ffd682" stroke-opacity=".17"/>
 
-  <!-- Pill 1 -->
-  <rect x="40" y="205" width="150" height="34" rx="9" fill="#2a070b" fill-opacity="0.75" stroke="#E0303C"/>
-  <circle cx="58" cy="222" r="5" stroke="#FFD65A" stroke-width="1.8"/>
-  <text x="74" y="227" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#fff4ea">Your City, VN</text>
+    <!-- Lõi năng lượng -->
+    <circle cx="234" cy="200" r="155" fill="url(#halo)">
+      <animate attributeName="opacity"
+               values=".6;1;.6"
+               dur="4s" repeatCount="indefinite"/>
+    </circle>
 
-  <!-- Pill 2 -->
-  <rect x="200" y="205" width="140" height="34" rx="9" fill="#2a070b" fill-opacity="0.75" stroke="#E0303C"/>
-  <circle cx="218" cy="222" r="5" stroke="#FFD65A" stroke-width="1.8"/>
-  <text x="234" y="227" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#fff4ea">FPT University</text>
+    <circle cx="234" cy="200" r="111"
+            stroke="#e7b966" stroke-opacity=".25"/>
 
-  <!-- Pill 3 -->
-  <rect x="350" y="205" width="165" height="34" rx="9" fill="#2a070b" fill-opacity="0.75" stroke="#E0303C"/>
-  <circle cx="368" cy="222" r="5" stroke="#FFD65A" stroke-width="1.8"/>
-  <text x="384" y="227" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#fff4ea">Java Web &amp; Embedded</text>
+    <path d="M134 152A111 111 0 0 1 284 101
+             M334 248A111 111 0 0 1 184 299"
+          stroke="#e7b966" stroke-width="3"/>
 
-  <!-- Code window -->
-  <rect x="540" y="30" width="320" height="240" rx="12" fill="#1a0508" fill-opacity="0.92" stroke="#E0303C"/>
-  <circle cx="562" cy="52" r="5" fill="#FF4D5A"/>
-  <circle cx="578" cy="52" r="5" fill="#FFD65A"/>
-  <circle cx="594" cy="52" r="5" fill="#5CE1FF"/>
-  <text x="700" y="56" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="11" fill="#d9a79c">profile.json</text>
-  <line x1="541" y1="68" x2="859" y2="68" stroke="#7a1a24"/>
+    <g stroke="#ffd68a" stroke-width="6"
+       stroke-dasharray="2 17" opacity=".8">
+      <circle cx="234" cy="200" r="99"/>
+      <animateTransform attributeName="transform"
+                        type="rotate"
+                        from="0 234 200"
+                        to="360 234 200"
+                        dur="80s"
+                        repeatCount="indefinite"/>
+    </g>
 
-  <g font-family="Consolas, Courier New, monospace" font-size="13">
-    <text x="562" y="96"><tspan fill="#ff6b6b">const</tspan> <tspan fill="#FFD65A">developer</tspan> <tspan fill="#f3e3da">=</tspan> <tspan fill="#F5B82E">{</tspan></text>
-    <text x="578" y="118"><tspan fill="#ff9a8b">name</tspan><tspan fill="#f3e3da">:</tspan> <tspan fill="#ffe0a8">"Van Khai"</tspan><tspan fill="#f3e3da">,</tspan></text>
-    <text x="578" y="140"><tspan fill="#ff9a8b">primaryStack</tspan><tspan fill="#f3e3da">:</tspan> <tspan fill="#F5B82E">[</tspan></text>
-    <text x="594" y="162"><tspan fill="#ffe0a8">"Java"</tspan><tspan fill="#f3e3da">,</tspan> <tspan fill="#ffe0a8">"JSP/Servlet"</tspan><tspan fill="#f3e3da">,</tspan></text>
-    <text x="594" y="184"><tspan fill="#ffe0a8">"SQL Server"</tspan><tspan fill="#f3e3da">,</tspan> <tspan fill="#ffe0a8">"Arduino"</tspan></text>
-    <text x="578" y="206"><tspan fill="#F5B82E">]</tspan><tspan fill="#f3e3da">,</tspan></text>
-    <text x="578" y="228"><tspan fill="#ff9a8b">status</tspan><tspan fill="#f3e3da">:</tspan> <tspan fill="#5CE1FF">"Ready to build"</tspan></text>
-    <text x="562" y="250"><tspan fill="#F5B82E">}</tspan><tspan fill="#f3e3da">;</tspan></text>
+    <circle cx="234" cy="200" r="84"
+            fill="#0d1820"
+            stroke="#58deed" stroke-opacity=".6"/>
+
+    <g stroke="#76edfb" stroke-width="3"
+       stroke-dasharray="100 33 22 33">
+      <circle cx="234" cy="200" r="73"/>
+      <animateTransform attributeName="transform"
+                        type="rotate"
+                        from="360 234 200"
+                        to="0 234 200"
+                        dur="22s"
+                        repeatCount="indefinite"/>
+    </g>
+
+    <path d="M234 143L283 228H185Z"
+          stroke="#8eefff" stroke-width="2"
+          fill="#46d6eb" fill-opacity=".08"/>
+
+    <circle cx="234" cy="200" r="36"
+            stroke="#a6f6ff" stroke-opacity=".45"/>
+    <circle cx="234" cy="200" r="25" fill="url(#core)"/>
+
+    <path d="M106 200H120M348 200H362
+             M234 72V86M234 314V328"
+          stroke="#f5cb7b" stroke-width="2"/>
+
+    <text x="234" y="350" text-anchor="middle"
+          font-family="monospace" font-size="9"
+          letter-spacing="3" fill="#c5a47d">
+      CORE / ACTIVE
+    </text>
+
+    <!-- Chức danh -->
+    <rect x="405" y="83" width="224" height="30" rx="15"
+          fill="#210d15" stroke="#edbd65"
+          stroke-opacity=".4"/>
+
+    <circle cx="421" cy="98" r="4" fill="#79edce">
+      <animate attributeName="opacity"
+               values="1;.4;1"
+               dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <text x="435" y="102"
+          font-family="Arial, sans-serif"
+          font-size="11" font-weight="700"
+          letter-spacing="2" fill="#f5ce8b">
+      SOFTWARE DEVELOPER
+    </text>
+
+    <!-- Tên -->
+    <text x="400" y="183"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="52" font-weight="700"
+          letter-spacing="-2" fill="#fff4e5">
+      Truong Van Khai (onlyKai)<tspan fill="#ffd074"></tspan>
+    </text>
+
+    <!-- Châm ngôn -->
+    <text x="405" y="225"
+          font-family="Segoe UI, Arial, sans-serif"
+          font-size="16" font-style="italic"
+          fill="#edc9bb">
+      “Vạn vật thay đổi, vật chất lên ngôi.”
+    </text>
+
+    <!-- Ô thông tin: Thành phố -->
+    <rect x="405" y="262" width="204" height="42" rx="9"
+          fill="#210d15" fill-opacity=".75"
+          stroke="#e8ae65" stroke-opacity=".35"/>
+
+    <g transform="translate(419 275)"
+       stroke="#7ce6ee" stroke-width="1.5"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 17S2 11 2 6a6 6 0 0 1 12 0c0 5-6 11-6 11Z"/>
+      <circle cx="8" cy="6" r="2"/>
+    </g>
+
+    <text x="445" y="288"
+          font-family="Segoe UI, Arial, sans-serif"
+          font-size="13" font-weight="600" fill="#fff0de">
+      Ho Chi Minh City, VN
+    </text>
+
+    <!-- Ô thông tin: Trường -->
+    <rect x="621" y="262" width="190" height="42" rx="9"
+          fill="#210d15" fill-opacity=".75"
+          stroke="#e8ae65" stroke-opacity=".35"/>
+
+    <g transform="translate(635 275)"
+       stroke="#7ce6ee" stroke-width="1.5"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 6L10 1L20 6L10 11Z"/>
+      <path d="M4 8V13Q10 18 16 13V8M20 6V14"/>
+    </g>
+
+    <text x="665" y="288"
+          font-family="Segoe UI, Arial, sans-serif"
+          font-size="13" font-weight="600" fill="#fff0de">
+      FPT University
+    </text>
+
+    <!-- Ô thông tin: Chuyên môn -->
+    <rect x="823" y="262" width="250" height="42" rx="9"
+          fill="#210d15" fill-opacity=".75"
+          stroke="#e8ae65" stroke-opacity=".35"/>
+
+    <g transform="translate(838 275)"
+       stroke="#7ce6ee" stroke-width="1.5"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 2L0 8L5 14M15 2L20 8L15 14M12 0L8 16"/>
+    </g>
+
+    <text x="871" y="288"
+          font-family="Segoe UI, Arial, sans-serif"
+          font-size="13" font-weight="600" fill="#fff0de">
+      Java Web &amp; Game Develop
+    </text>
+
+    <!-- Trạng thái -->
+    <text x="405" y="342"
+          font-family="monospace" font-size="10"
+          letter-spacing="2" fill="#83e8ec">
+      &gt; READY TO BUILD_
+    </text>
   </g>
+
+  <rect x=".75" y=".75"
+        width="1198.5" height="398.5" rx="21.25"
+        stroke="#dc6558" stroke-opacity=".6"
+        stroke-width="1.5"/>
 </svg>
