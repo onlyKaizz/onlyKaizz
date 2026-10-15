@@ -36,3 +36,21 @@
 - 🌿 Finding fresh ideas away from the screen.
 
 > “Life is not about having all the answers, but having the courage to keep discovering.”
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">
+    <img src="https://img.shields.io/badge/LinkedIn-181717?style=flat-square&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" />
+  </a>
+  <a href="mailto:vankhai08032004@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-181717?style=flat-square&logo=gmail&logoColor=EA4335" alt="Gmail" />
+  </a>
+  <a href="https://YOUR_PORTFOLIO">
+    <img src="https://img.shields.io/badge/Portfolio-181717?style=flat-square&logo=googlechrome&logoColor=4285F4" alt="Portfolio" />
+  </a>
+  <a href="https://www.facebook.com/truong.van.khai.343296/">
+    <img src="https://img.shields.io/badge/Facebook-181717?style=flat-square&logo=facebook&logoColor=1877F2" alt="Facebook" />
+  </a>
+  <a href="https://github.com/onlyKaizz">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+</p>
